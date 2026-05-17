@@ -51,19 +51,19 @@ For the non-linear case, we used a **polynomial transformation** to project the 
 **Overlapping data** — SGD converges quickly while Batch GD oscillates before settling:
 
 <p align="center">
-  <img src="figures_optim/fig_svm_chevauchement.png" alt="Convergence comparison on overlapping data" width="80%"/>
+  <img src="fig_svm_chevauchement.png" alt="Convergence comparison on overlapping data" width="80%"/>
 </p>
 
 **Non-linear moons** — Both methods converge smoothly once the polynomial transformation is applied:
 
 <p align="center">
-  <img src="figures_optim/fig_svm_moons.png" alt="Convergence on non-linear moon-shaped data" width="80%"/>
+  <img src="fig_svm_moons.png" alt="Convergence on non-linear moon-shaped data" width="80%"/>
 </p>
 
 **Accuracy over time** — Both methods progressively improve their classification accuracy, approaching the theoretical optimum (dashed green line):
 
 <p align="center">
-  <img src="figures_optim/fig_svm_precision.png" alt="Accuracy evolution: Batch GD vs SGD vs optimal" width="80%"/>
+  <img src="fig_svm_precision.png" alt="Accuracy evolution: Batch GD vs SGD vs optimal" width="80%"/>
 </p>
 
 ### Main findings
@@ -106,19 +106,19 @@ We implemented Batch Subgradient Descent and SGD for LASSO from scratch, and tes
 **Sparse high-dimensional data** — Batch GD converges perfectly while SGD diverges catastrophically with the same learning rate (the orange line explodes to 10¹⁴):
 
 <p align="center">
-  <img src="figures_optim/fig_lasso_haute_dim.png" alt="LASSO: SGD diverges in high dimension" width="80%"/>
+  <img src="fig_lasso_haute_dim.png" alt="LASSO: SGD diverges in high dimension" width="80%"/>
 </p>
 
 **Underdetermined system** — Batch GD finds a stable solution while SGD shows initial instability before settling:
 
 <p align="center">
-  <img src="figures_optim/fig_lasso_sous_determine.png" alt="LASSO convergence on underdetermined system" width="80%"/>
+  <img src="fig_lasso_sous_determine.png" alt="LASSO convergence on underdetermined system" width="80%"/>
 </p>
 
 **Sparsity & support recovery** — Over iterations, Batch GD progressively identifies the correct sparse variables (right panel reaches 1.0 = perfect recovery):
 
 <p align="center">
-  <img src="figures_optim/fig_lasso_sparsite.png" alt="Sparsity and support recovery over iterations" width="80%"/>
+  <img src="fig_lasso_sparsite.png" alt="Sparsity and support recovery over iterations" width="80%"/>
 </p>
 
 ### Main findings
@@ -148,12 +148,12 @@ We implemented Batch Subgradient Descent and SGD for LASSO from scratch, and tes
 
 ---
 
-## ⚙️ How to Run
+## How to Run?
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/SkanderHAJMABROUK/svm-and-lasso-demonstrations
+cd svm-and-lasso-demonstrations
 
 # Install dependencies
 pip install numpy matplotlib scikit-learn
@@ -174,13 +174,13 @@ Open `Projet_SVM.ipynb` or `Projet_Lasso.ipynb` and run all cells.
 .
 ├── Projet_SVM.ipynb          # SVM optimization notebook
 ├── Projet_Lasso.ipynb        # LASSO optimization notebook
-├── figures_optim/            # Figures used in this README
-│   ├── fig_svm_chevauchement.png
-│   ├── fig_svm_moons.png
-│   ├── fig_svm_precision.png
-│   ├── fig_lasso_haute_dim.png
-│   ├── fig_lasso_sous_determine.png
-│   └── fig_lasso_sparsite.png
+# Figures used in this README
+│   fig_svm_chevauchement.png
+│   fig_svm_moons.png
+│   fig_svm_precision.png
+│   fig_lasso_haute_dim.png
+│   fig_lasso_sous_determine.png
+│   fig_lasso_sparsite.png
 └── README.md
 ```
 
