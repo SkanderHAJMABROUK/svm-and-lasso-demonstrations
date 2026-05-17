@@ -189,5 +189,5 @@ Open `Projet_SVM.ipynb` or `Projet_Lasso.ipynb` and run all cells.
 ## Authors
 
 **Maram NASR** & **Skander HAJ MABROUK**
-M2 MALIA — Université de Lyon
+M2 MALIA — Université Lumière Lyon 2
 Optimisation Module — Academic Year 2025–2026
